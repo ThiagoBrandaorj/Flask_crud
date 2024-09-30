@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Criar Pesquisa</title>
+</head>
+<body>
+    <h1>Criar Nova Pesquisa</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.pesquisa_nome.label }} {{ form.pesquisa_nome() }}<br>
+        {{ form.data_inicio.label }} {{ form.data_inicio() }}<br>
+        {{ form.data_fim.label }} {{ form.data_fim() }}<br>
+        {{ form.ativo.label }} {{ form.ativo() }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

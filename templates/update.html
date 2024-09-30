@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>{% if pesquisa %}Editar{% else %}Nova{% endif %} Pesquisa</title>
+    <meta charset="utf-8">
+    <title>Editar Pesquisa</title>
 </head>
 <body>
-    <h1>{% if pesquisa %}Editar{% else %}Nova{% endif %} Pesquisa</h1>
-    <form method="post">
+    <h1>Editar Pesquisa</h1>
+    <form method="POST">
         {{ form.hidden_tag() }}
         {{ form.pesquisa_nome.label }} {{ form.pesquisa_nome() }}<br>
         {{ form.data_inicio.label }} {{ form.data_inicio() }}<br>
         {{ form.data_fim.label }} {{ form.data_fim() }}<br>
+        {{ form.ativo.label }} {{ form.ativo() }}<br>
         {{ form.submit() }}
     </form>
-    <a href="{{ url_for('listar_pesquisas') }}">Voltar</a>
 </body>
 </html>
